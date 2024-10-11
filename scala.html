@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Scala</title>
+
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/blood.css">
+  <link rel="stylesheet" href="plugin/highlight/gruvbox.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h1>Scala</h1>
+        <h3>BY: Miguel Cock</h3>
+      </section>
+
+      <section>
+        <h3>List / Array / Vector</h3>
+        <pre><code data-trim data-noescape data-line-numbers="|1,2|4,5|7,8|" class="Scala"">
+          // Linked list
+          val a = List(1,2,3)
+
+          // Continous memory
+          var b = Array(1,2,3)
+
+          // A Tree of contiuos memory
+          var c = Vector(1,2,3)
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Linked lists / Lists</h2>
+        <pre><code data-trim data-noescape data-line-numbers="|1-4|6-8|" class="Scala"">
+          // under the hood example
+          enum node[+A]:
+            case Empty
+            case NonEmpty(head: A, tail: node[A])
+
+          //actual example
+          val l = List(1,2) // List(1, 2)
+          val ll = 1 :: 2 :: Nil // List(1, 2)
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Sum List recursive</h2>
+        <pre><code data-trim data-noescape data-line-numbers="|1|2|3|4|" class="Scala"">
+          def sumList(l: List[Int]): Int =
+            l match
+              case head :: tail => head + sumList(tail)
+              case Nil => 0
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Sum List tail recursive</h2>
+        <pre><code data-trim data-noescape data-line-numbers="||" class="Scala"">
+          def sumListTail(l: List[Int]): Int =
+            @annotation.tailrec
+            def loop(r: List[Int], acc: Int): Int
+              r match
+                case head :: tail => loop(tail, acc+ head)
+                case Nil => acc
+            end loop
+            loop(r, 0)
+            end sumListTail
+        </code></pre>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/math/math.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
+    });
+  </script>
+</body>
+
+</html>
