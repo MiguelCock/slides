@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>Godot</title>
+
+  <link rel="stylesheet" href="../dist/reset.css" />
+  <link rel="stylesheet" href="../dist/reveal.css" />
+  <link rel="stylesheet" href="../dist/theme/blood.css" />
+  <link rel="stylesheet" href="../plugin/highlight/gruvbox.css" />
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>Godot</h1>
+        <h3>BY: Miguel Cock</h3>
+      </section>
+
+      <section data-auto-animate>
+        <h3>Variables</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="gd">
+          var num = 5
+          var text = "Hello"
+          var arr = [1, 2, 3]
+          var dict = {"key": "value", 2: 3}
+          var other_dict = {key = "value", other_key = 2}
+          var typed_var: int
+          var inferred_type := "String"
+          var vec = Vector2(2, 5)
+        </code></pre>
+      </section>
+
+      <section data-auto-animate>
+        <h3>Functions</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers="|1-3|5-7|" class="gd">
+          # not typed
+          func mundo_hola(a):
+            print("Hello world!" + a)
+
+          # typed
+          func mundo_hola(a: String) -> void:
+            print("Hello world!" + a)
+        </code></pre>
+      </section>
+
+      <section data-auto-animate>
+        <h3>Anonymous Functions</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="gd">
+          var num = 10
+
+          var funcion = func (a):
+            print(a)
+          
+          funcion.call(10)
+        </code></pre>
+      </section>
+
+      <section data-auto-animate>
+        <h3>If / Elif / Else</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="gd">
+          if (n % 2 == 0):
+            return "divisible por 2"
+          elif (n % 3 == 0):
+            return "divisible por 3"
+          else:
+            return "algun numero"
+        </code></pre>
+      </section>
+
+      <section data-auto-animate>
+        <h3>While</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="gd">
+          var i = 0
+          while (i &lt; 10):
+            print(i)
+            i += 1
+        </code></pre>
+      </section>
+
+      <section data-auto-animate>
+        <h3>While</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="gd">
+          var i = 0
+          while (i &lt; 10):
+            print(i)
+            i += 1
+        </code></pre>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="../dist/reveal.js"></script>
+  <script src="../plugin/notes/notes.js"></script>
+  <script src="../plugin/markdown/markdown.js"></script>
+  <script src="../plugin/highlight/highlight.js"></script>
+  <script src="../plugin/math/math.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealMath,
+      ],
+    });
+  </script>
+</body>
+
+</html>

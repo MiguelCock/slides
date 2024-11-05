@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>JS</title>
+
+  <link rel="stylesheet" href="../dist/reset.css" />
+  <link rel="stylesheet" href="../dist/reveal.css" />
+  <link rel="stylesheet" href="../dist/theme/blood.css" />
+  <link rel="stylesheet" href="../plugin/highlight/gruvbox.css" />
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>JS</h1>
+        <h3>BY: Miguel Cock</h3>
+      </section>
+
+      <section>
+        <h3>OUTPUT</h3>
+        <pre><code data-trim data-noescape data-line-numbers class="js">
+          console.log("hellow world!");
+        </code></pre>
+      </section>
+
+      <section>
+        <h3>for loop</h3>
+        <pre><code data-trim data-noescape data-line-numbers class="js">
+          for(var i = 1; i &lt 10; i++) {
+              console.log(i);
+          }
+        </code></pre>
+      </section>
+
+      <section data-auto-animate>
+        <h3>canvas object</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="js">
+          var c = document.getElementById("gemu");
+          var ctx = c.getContext("2d");
+        </code></pre>
+      </section>
+
+      <section data-auto-animate>
+        <h3>imgs</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="js">
+            var c = document.getElementById("gemu");
+            var ctx = c.getContext("2d");
+
+            const img1 = new Image();
+            img1.src = "img1.png";
+        </code></pre>
+      </section>
+
+      <section data-auto-animate>
+        <h3>draw image</h3>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="js">
+          var c = document.getElementById("gemu");
+          var ctx = c.getContext("2d");
+
+          const img1 = new Image();
+          img1.src = "img1.png";
+
+          ctx.drawImage(img1, 200, 200, 80, 80);
+        </code></pre>
+      </section>
+    </div>
+  </div>
+
+  <script src="../dist/reveal.js"></script>
+  <script src="../plugin/notes/notes.js"></script>
+  <script src="../plugin/markdown/markdown.js"></script>
+  <script src="../plugin/highlight/highlight.js"></script>
+  <script src="../plugin/math/math.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealMath,
+      ],
+    });
+  </script>
+</body>
+
+</html>

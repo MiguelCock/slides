@@ -1,1 +1,0 @@
-# C BASICS MY WAY

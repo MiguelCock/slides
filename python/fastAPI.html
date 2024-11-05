@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>FastAPI</title>
+
+  <link rel="stylesheet" href="../dist/reset.css" />
+  <link rel="stylesheet" href="../dist/reveal.css" />
+  <link rel="stylesheet" href="../dist/theme/blood.css" />
+  <link rel="stylesheet" href="../plugin/highlight/gruvbox.css" />
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>FatAPI</h1>
+        <h3>BY: Miguel Cock</h3>
+      </section>
+
+      <section>
+        <h3>INSTALLATION</h3>
+        <pre><code data-trim data-noescape class="bash">
+            &gt pip install "fastapi[standard]"
+            &gt fastapi dev main.py
+        </code></pre>
+      </section>
+
+      <section>
+        <h3>First steps</h3>
+        <pre><code data-trim data-noescape data-line-numbers class="py">
+            from fastapi import FastAPI
+
+            app = FastAPI()
+
+
+            @app.get("/")
+            async def root():
+                return {"message": "Hello World"}
+        </code></pre>
+      </section>
+
+      <section>
+        <h3>First steps</h3>
+        <pre><code data-trim data-noescape data-line-numbers class="py">
+            from pydantic import BaseModel
+
+
+            class Item(BaseModel):
+                name: str
+                description: str | None = None
+                price: float
+                tax: float | None = None
+        </code></pre>
+      </section>
+    </div>
+  </div>
+
+  <script src="../dist/reveal.js"></script>
+  <script src="../plugin/notes/notes.js"></script>
+  <script src="../plugin/markdown/markdown.js"></script>
+  <script src="../plugin/highlight/highlight.js"></script>
+  <script src="../plugin/math/math.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealMath,
+      ],
+    });
+  </script>
+</body>
+
+</html>
