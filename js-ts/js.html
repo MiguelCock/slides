@@ -39,51 +39,32 @@
 
       <section data-auto-animate>
         <h3>canvas object</h3>
-        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="js">
-          var c = document.getElementById("gemu");
-          var ctx = c.getContext("2d");
-        </code></pre>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers data-url="canvas.js" data-line-start="1" data-line-end="2" class="js"></code></pre>
       </section>
 
       <section data-auto-animate>
         <h3>imgs</h3>
-        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="js">
-            var c = document.getElementById("gemu");
-            var ctx = c.getContext("2d");
-
-            const img1 = new Image();
-            img1.src = "img1.png";
-        </code></pre>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers data-url="canvas.js" data-line-start="1" data-line-end="5" class="js"></code></pre>
       </section>
 
       <section data-auto-animate>
         <h3>draw image</h3>
-        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="js">
-          var c = document.getElementById("gemu");
-          var ctx = c.getContext("2d");
-
-          const img1 = new Image();
-          img1.src = "img1.png";
-
-          ctx.drawImage(img1, 200, 200, 80, 80);
-        </code></pre>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers data-url="canvas.js" data-line-start="1" data-line-end="7" class="js"></code></pre>
       </section>
     </div>
   </div>
 
   <script src="../dist/reveal.js"></script>
-  <script src="../plugin/notes/notes.js"></script>
-  <script src="../plugin/markdown/markdown.js"></script>
   <script src="../plugin/highlight/highlight.js"></script>
-  <script src="../plugin/math/math.js"></script>
+  <script src="../plugin/copycode/copycode.js"></script>
+  <script src="../plugin/embed/embed-code.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
       plugins: [
-        RevealMarkdown,
+        EmbedCode,
         RevealHighlight,
-        RevealNotes,
-        RevealMath,
+        CopyCode,
       ],
     });
   </script>

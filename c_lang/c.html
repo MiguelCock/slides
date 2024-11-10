@@ -182,19 +182,17 @@
   </div>
 
   <script src="../dist/reveal.js"></script>
-  <script src="../plugin/notes/notes.js"></script>
-  <script src="../plugin/markdown/markdown.js"></script>
   <script src="../plugin/highlight/highlight.js"></script>
-  <script src="../plugin/math/math.js"></script>
+  <script src="../plugin/copycode/copycode.js"></script>
+  <script src="../plugin/embed/embed-code.js"></script>
   <script>
-    // More info about initialization & config:
-    // - https://revealjs.com/initialization/
-    // - https://revealjs.com/config/
     Reveal.initialize({
       hash: true,
-
-      // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath]
+      plugins: [
+        EmbedCode,
+        RevealHighlight,
+        CopyCode,
+      ],
     });
   </script>
 </body>

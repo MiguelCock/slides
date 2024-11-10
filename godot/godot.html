@@ -23,16 +23,7 @@
 
       <section data-auto-animate>
         <h3>Variables</h3>
-        <pre data-id="img"><code data-trim data-noescape data-line-numbers class="gd">
-          var num = 5
-          var text = "Hello"
-          var arr = [1, 2, 3]
-          var dict = {"key": "value", 2: 3}
-          var other_dict = {key = "value", other_key = 2}
-          var typed_var: int
-          var inferred_type := "String"
-          var vec = Vector2(2, 5)
-        </code></pre>
+        <pre data-id="img"><code data-trim data-noescape data-line-numbers data-url="variables.gd" data-line-start="1" data-line-end="8" class="gd"></code></pre>
       </section>
 
       <section data-auto-animate>
@@ -96,18 +87,16 @@
   </div>
 
   <script src="../dist/reveal.js"></script>
-  <script src="../plugin/notes/notes.js"></script>
-  <script src="../plugin/markdown/markdown.js"></script>
   <script src="../plugin/highlight/highlight.js"></script>
-  <script src="../plugin/math/math.js"></script>
+  <script src="../plugin/copycode/copycode.js"></script>
+  <script src="../plugin/embed/embed-code.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
       plugins: [
-        RevealMarkdown,
+        EmbedCode,
         RevealHighlight,
-        RevealNotes,
-        RevealMath,
+        CopyCode,
       ],
     });
   </script>

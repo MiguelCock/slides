@@ -32,18 +32,16 @@
   </div>
 
   <script src="../dist/reveal.js"></script>
-  <script src="../plugin/notes/notes.js"></script>
-  <script src="../plugin/markdown/markdown.js"></script>
   <script src="../plugin/highlight/highlight.js"></script>
-  <script src="../plugin/math/math.js"></script>
+  <script src="../plugin/copycode/copycode.js"></script>
+  <script src="../plugin/embed/embed-code.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
       plugins: [
-        RevealMarkdown,
+        EmbedCode,
         RevealHighlight,
-        RevealNotes,
-        RevealMath,
+        CopyCode,
       ],
     });
   </script>
